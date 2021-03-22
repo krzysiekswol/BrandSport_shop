@@ -53,6 +53,9 @@ header {
         transition: all 2s;
         &:hover {
           background-color: transparent;
+          &::after {
+            animation: fill 1s forwards;
+          }
         }
         &:after {
           content: "";
@@ -60,13 +63,10 @@ header {
           bottom: 0;
           left: 0;
           display: block;
-          width: 10%;
+          width: 0%;
           height: 1px;
           margin: auto;
           background-color: red;
-          &:hover {
-            animation: fill 2s linear;
-          }
         }
       }
     }
@@ -163,24 +163,6 @@ footer {
   }
   100% {
     width: 100%;
-    height: 100%;
-    background: #333;
-  }
-}
-@keyframes fill {
-  0% {
-    a::after {
-      width: 0%;
-    }
-  }
-  50% {
-    a::after {
-      width: 50%;
-    }
-  }
-  100% {
-    a::after {
-      width: 100%;
-    }
+    height: 1px;
   }
 }
