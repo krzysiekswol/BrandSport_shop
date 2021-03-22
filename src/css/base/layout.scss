@@ -37,21 +37,46 @@ header {
     }
     .navbar {
       flex-basis: 60%;
+      margin-right: 2%;
       // ====display-flex===
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-end;
       a {
-        flex-basis: 25%;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        margin: 2rem;
         text-decoration: none;
         color: white;
+        text-align: center;
+        position: relative;
+        // hover
+        transition: all 2s;
+        &:hover {
+          background-color: transparent;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          width: 10%;
+          height: 1px;
+          margin: auto;
+          background-color: red;
+          &:hover {
+            animation: fill 2s linear;
+          }
+        }
       }
     }
   }
+
   .slider {
     grid-column: 1/11;
     grid-row: 2/9;
-    background-image: url("/src/assets/run.jpg");
-    background-position: center 30%;
+    background-image: url("/src/assets/nike.jpg");
+    background-position: center 60%;
     background-size: cover;
     display: block;
     background-color: yellow;
@@ -61,6 +86,7 @@ header {
 }
 
 main {
+  margin-top: 2%;
   grid-column: 1/ 11;
   grid-row: 6 / 10;
   width: 100%;
@@ -69,14 +95,33 @@ main {
   display: flex;
   justify-content: space-between;
   .introduction {
-    flex-basis: 70%;
     margin-left: 2%;
-    border: 1px solid lightgray;
+    flex-basis: 70%;
+    // display lfex ====
+    display: flex;
+    flex-direction: column;
+    h1 {
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      margin-left: 2%;
+      flex-basis: 10%;
+    }
+    h2 {
+      @extend h1;
+      margin-top: 2%;
+    }
+    .intro p,
+    .promo p {
+      line-height: 2rem;
+      flex-basis: 40%;
+    }
   }
   aside {
-    margin: 2%;
-    flex-basis: 25%;
-    background-color: lightgrey;
+    margin-right: 2%;
+    // border: 2px solid red;
+    flex-basis: 20%;
+    border-radius: 2rem;
+    box-shadow: 10px 5px 15px black;
     // display flex
     display: flex;
     flex-direction: column;
@@ -103,5 +148,39 @@ footer {
   grid-column: 1/11;
   grid-row: 10/11;
   background-color: rgb(23, 24, 26);
-  margin-top: 2%;
+  margin-top: 3%;
+}
+
+/* Keyframes */
+@keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+@keyframes fill {
+  0% {
+    a::after {
+      width: 0%;
+    }
+  }
+  50% {
+    a::after {
+      width: 50%;
+    }
+  }
+  100% {
+    a::after {
+      width: 100%;
+    }
+  }
 }
