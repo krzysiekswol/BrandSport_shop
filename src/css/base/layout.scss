@@ -13,9 +13,6 @@ header {
   // display grid ========
   display: grid;
   grid-template-rows: repeat(8, 1fr);
-  // width: 100%;
-  // height: 100%;
-
   nav {
     grid-row: 1/ 2;
     grid-column: 1/ 11;
@@ -41,20 +38,24 @@ header {
       // ====display-flex===
       display: flex;
       justify-content: flex-end;
-      a {
+      .navi {
         padding: 0.5rem;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin: 2rem;
         text-decoration: none;
         color: white;
         text-align: center;
         position: relative;
         // hover
-        transition: all 2s;
+        transition: all 1s linear;
         &:hover {
-          background-color: transparent;
+          color: red;
+          z-index: 1;
           &::after {
             animation: fill 1s forwards;
+            -webkit-animation: fill 1s forwards;
+            -moz-animation: fill 1s forwards;
+            z-index: -10;
           }
         }
         &:after {
@@ -83,6 +84,45 @@ header {
     // width: 100%;
     // height: 100%;
   }
+}
+// social Media button
+.socialMedia {
+  position: fixed;
+  width: 70px;
+  height: 100px;
+  background-color: #fff;
+  left: 96%;
+  top: 30%;
+  transition: all 1s ease-in-out;
+  // display flex ====
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .facebook {
+    width: 100%;
+    flex-basis: 50%;
+    background-color: #4267b2;
+    // display: flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fab {
+      color: #fff;
+      font-size: 2.2rem;
+    }
+  }
+}
+.instagram {
+  @extend .facebook;
+  background: linear-gradient(
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
 }
 
 main {
@@ -149,20 +189,26 @@ footer {
   grid-row: 10/11;
   background-color: rgb(23, 24, 26);
   margin-top: 3%;
+  // display:flex
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .footerBoxes {
+    width: 100%;
+    height: 90%;
+    border-right: 1px solid #aaa;
+  }
 }
 
 /* Keyframes */
 @keyframes fill {
   0% {
     width: 0%;
-    height: 1px;
   }
   50% {
     width: 100%;
-    height: 1px;
   }
   100% {
     width: 100%;
-    height: 1px;
   }
 }
