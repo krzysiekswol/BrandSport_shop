@@ -86,44 +86,6 @@ header {
   }
 }
 // social Media button
-.socialMedia {
-  position: fixed;
-  width: 70px;
-  height: 100px;
-  background-color: #fff;
-  left: 96%;
-  top: 30%;
-  transition: all 1s ease-in-out;
-  // display flex ====
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .facebook {
-    width: 100%;
-    flex-basis: 50%;
-    background-color: #4267b2;
-    // display: flex
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .fab {
-      color: #fff;
-      font-size: 2.2rem;
-    }
-  }
-}
-.instagram {
-  @extend .facebook;
-  background: linear-gradient(
-    #405de6,
-    #5851db,
-    #833ab4,
-    #c13584,
-    #e1306c,
-    #fd1d1d
-  );
-}
 
 main {
   margin-top: 2%;
@@ -141,7 +103,7 @@ main {
     display: flex;
     flex-direction: column;
     h1 {
-      letter-spacing: 0.3rem;
+      letter-spacing: 0.2rem;
       text-transform: uppercase;
       margin-left: 2%;
       flex-basis: 10%;
@@ -155,11 +117,31 @@ main {
       line-height: 2rem;
       flex-basis: 40%;
     }
+    .strengths {
+      list-style-type: none;
+      li {
+        line-height: 1.8rem;
+        .fa-thumbs-up {
+          color: red;
+          margin-right: 1rem;
+        }
+      }
+    }
+    .promo {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .promoBox {
+        width: 200px;
+        height: 200px;
+        background-color: #aaa;
+      }
+    }
   }
   aside {
     margin-right: 2%;
     // border: 2px solid red;
-    flex-basis: 20%;
+    flex-basis: 10%;
     border-radius: 2rem;
     box-shadow: 10px 5px 15px black;
     // display flex
@@ -168,12 +150,12 @@ main {
     justify-content: center;
     align-items: center;
     .cooperate {
-      margin-top: 2%;
+      margin-top: 1rem;
       font-weight: bold;
     }
     .logo {
-      width: 200px;
-      height: 200px;
+      width: 100px;
+      height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -184,6 +166,7 @@ main {
     }
   }
 }
+// footer =====================
 footer {
   grid-column: 1/11;
   grid-row: 10/11;
@@ -194,9 +177,77 @@ footer {
   justify-content: space-around;
   align-items: center;
   .footerBoxes {
-    width: 100%;
-    height: 90%;
+    width: 80%;
+    height: 70%;
     border-right: 1px solid #aaa;
+    margin-bottom: 1%;
+    // display:flex
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .companyName {
+      color: white;
+      margin: 1rem;
+      text-align: center;
+
+      .red {
+        color: red;
+      }
+    }
+    .adress,
+    .phone {
+      margin: 0.2rem;
+      color: white;
+      font-size: 0.9rem;
+      .fa-home,
+      .fa-phone {
+        margin-right: 0.5rem;
+        color: #aaa;
+      }
+    }
+    .openHours {
+      @extend .companyName;
+    }
+    .hours,
+    .mail {
+      @extend .adress;
+      text-decoration: none;
+      .fa-clock,
+      .fa-envelope {
+        @extend .fa-home;
+      }
+    }
+    .watchUs {
+      @extend .companyName;
+      margin-bottom: 1.4rem;
+    }
+    .socialMedia {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .facebook {
+        flex-basis: 40%;
+        width: 5rem;
+        padding: 0 0.5rem;
+        background-color: #4267b2;
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+        border-radius: 10%;
+      }
+      .instagram {
+        @extend .facebook;
+        background: linear-gradient(
+          #405de6,
+          #5851db,
+          #833ab4,
+          #c13584,
+          #e1306c,
+          #fd1d1d
+        );
+      }
+    }
   }
 }
 
