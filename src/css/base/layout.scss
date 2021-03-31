@@ -40,9 +40,9 @@ header {
       display: flex;
       justify-content: flex-end;
       .navi {
-        padding: 0.5rem;
+        padding: 2.5rem;
         font-size: 1.1rem;
-        margin: 2rem;
+
         text-decoration: none;
         color: white;
         text-align: center;
@@ -63,8 +63,9 @@ header {
         &:after {
           content: "";
           position: absolute;
-          bottom: 0;
-          left: 0;
+          bottom: 30%;
+          left: 50%;
+          transform: translateX(-50%);
           display: block;
           width: 0%;
           height: 1px;
@@ -77,58 +78,70 @@ header {
   // dropdown
   .dropdown {
     position: relative;
-    // flex
     display: flex;
     justify-content: center;
-    #dropdownbtn {
-      width: 100%;
-    }
     .dropdown__content {
+      display: none;
       position: absolute;
       top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #fff;
+      left: 0;
+      background-color: rgb(23, 24, 26);
       padding: 2rem;
-      // flex
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      width: 100%;
+      // height: 3rem;
       .dropdown__item {
-        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem;
+      }
+      &:hover {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
       }
     }
-  }
-  .slider {
-    grid-column: 1/11;
-    grid-row: 2/3;
-    background-image: url("/src/assets/nike.jpg");
-    background-position: center 60%;
-    background-size: cover;
-    display: block;
-    background-color: yellow;
-    position: relative;
-    .arrowLeft {
-      display: block;
-      position: absolute;
-      top: calc(50%-1.5rem);
-      left: 5%;
-      width: 2rem;
-      height: 2rem;
-      .fa-arrow-circle-left {
-        font-size: 2.5rem;
-        color: red;
-      }
-    }
-    .arrowRight {
-      @extend .arrowLeft;
-      left: 95%;
-      .fa-arrow-circle-right {
-        @extend .fa-arrow-circle-left;
+    #dropdownbtn {
+      width: 100%;
+      &:hover + div.dropdown__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        animation: dropdown 300ms ease-in-out forwards;
+        transform-origin: top;
       }
     }
   }
 }
+.slider {
+  grid-column: 1/11;
+  grid-row: 2/3;
+  background-image: url("/src/assets/nike.jpg");
+  background-position: center 60%;
+  background-size: cover;
+  display: block;
+  background-color: yellow;
+  position: relative;
+  .arrowLeft {
+    display: block;
+    position: absolute;
+    top: calc(50%-1.5rem);
+    left: 5%;
+    width: 2rem;
+    height: 2rem;
+    .fa-arrow-circle-left {
+      font-size: 2.5rem;
+      color: red;
+    }
+  }
+  .arrowRight {
+    @extend .arrowLeft;
+    left: 95%;
+    .fa-arrow-circle-right {
+      @extend .fa-arrow-circle-left;
+    }
+  }
+}
+
 // social Media button
 
 main {
@@ -304,9 +317,21 @@ footer {
     width: 0%;
   }
   50% {
-    width: 100%;
+    width: 70%;
   }
   100% {
-    width: 100%;
+    width: 70%;
+  }
+}
+
+@keyframes dropdown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
