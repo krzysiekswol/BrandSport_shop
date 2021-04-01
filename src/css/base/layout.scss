@@ -120,12 +120,12 @@ header {
 .slider {
   grid-column: 1/11;
   grid-row: 2/3;
-  background-image: url("/src/assets/nike_slider.jpg");
+  // background-image: url("/src/assets/banner1.jpg");
   background-position: center 60%;
   background-size: cover;
   display: block;
-  background-color: yellow;
   position: relative;
+  animation: slider 4s linear infinite;
   .dot {
     position: absolute;
     bottom: 5%;
@@ -142,6 +142,7 @@ header {
       height: 0.4rem;
       background-color: #fff;
       cursor: pointer;
+      border-radius: 15%;
     }
     span.dot__item.active {
       background-color: red;
@@ -361,5 +362,24 @@ footer {
   }
   100% {
     transform: scaleY(1);
+  }
+}
+
+@keyframes slider {
+  0% {
+    opacity: 0.8;
+  }
+
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
   }
 }
