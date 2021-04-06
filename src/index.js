@@ -51,3 +51,18 @@ const automaticSlider = () => {
   i++;
 };
 setInterval(automaticSlider, 4000);
+
+// modal
+const promoBoxes = document.querySelectorAll(".promoBox__item");
+console.log(promoBoxes);
+
+promoBoxes.forEach((item) => {
+  item.addEventListener("click", function () {
+    document.querySelector(".modal").classList.add("modal__active");
+  });
+});
+
+const closeModal = document.querySelector(".modal--cancel");
+closeModal.addEventListener("click", function () {
+  document.querySelector(".modal__active").classList.remove("modal__active");
+});
