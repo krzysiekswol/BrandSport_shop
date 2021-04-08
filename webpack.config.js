@@ -26,20 +26,26 @@ module.exports = {
   plugins: [
         new HtmlWebpackPlugin({
           template: "./src/index.html"}),
-          // new HtmlWebpackPlugin({
-          //   template: './src/kontakt.html',
-          //   inject: true,
-          //   chunks: ['index'],
-          //   filename: 'kontakt.html'
-          // }),
+        new HtmlWebpackPlugin({
+            template: './src/kontakt.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'kontakt.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/overprint.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'overprint.html'
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
           filename: "[name].[hash].css"
         }),
-       new OptimizeCssAssetsPlugin({
+        new OptimizeCssAssetsPlugin({
           assetNameRegExp: /\.css$/
-       }),
-       new BrowserSyncPlugin({
+        }),
+        new BrowserSyncPlugin({
           host: 'localhost',
           port: 9000,
           proxy: 'http://localhost:9000'
