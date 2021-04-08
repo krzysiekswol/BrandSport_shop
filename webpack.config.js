@@ -25,7 +25,10 @@ module.exports = {
   },
   plugins: [
         new HtmlWebpackPlugin({
-          template: "./src/index.html"}),
+            template: "./src/index.html",
+            inject: true,
+            chunks: ['index'],
+            filename: 'index.html'}),
         new HtmlWebpackPlugin({
             template: './src/kontakt.html',
             inject: true,
