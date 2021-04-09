@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-around;
   background-color: #f2f2f2;
+  padding-bottom: 1rem;
   .contact__item--map {
     flex-basis: 45%;
     display: flex;
@@ -26,10 +27,12 @@
     }
     .item__address {
       width: 50%;
-      height: 25%;
+      height: 27%;
       box-shadow: 5px 5px 10px 5px #aaa;
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.1) translate(10%, 2%);
+        z-index: 2;
+        cursor: pointer;
       }
       .address--noitalic {
         font-style: normal;
@@ -37,6 +40,9 @@
         h4 {
           text-align: center;
           margin: 0.5rem;
+          span {
+            font-size: 0.7rem;
+          }
         }
         p {
           text-align: left;
