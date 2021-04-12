@@ -50,7 +50,7 @@ const automaticSlider = () => {
   }
   i++;
 };
-setInterval(automaticSlider, 4000);
+setInterval(automaticSlider, 5000);
 
 // modal
 const promoBoxes = document.querySelectorAll(".promoBox__item");

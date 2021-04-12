@@ -244,6 +244,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 2rem 0;
   .footerBoxes {
     width: 80%;
     height: 70%;
@@ -267,10 +268,11 @@ footer {
       margin: 0.2rem;
       color: white;
       font-size: 0.9rem;
+      text-align: left;
       .fa-home,
       .fa-phone {
         margin-right: 0.5rem;
-        color: #d92629;
+        color: #aaa;
       }
     }
     .openHours {
@@ -301,13 +303,14 @@ footer {
         color: white;
         text-align: center;
         font-size: 2rem;
-        line-height: 3rem;
+        line-height: 4rem;
         border-radius: 50%;
         margin: 0 1rem;
       }
       .instagram {
         @extend .facebook;
-        //
+        line-height: 3rem;
+        border-radius: 15%;
         background: -moz-linear-gradient(
           45deg,
           #f09433 0%,

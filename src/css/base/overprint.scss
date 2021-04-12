@@ -1,15 +1,38 @@
+.l-main {
+  background-color: #f9f9f9;
+}
 .print {
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.print__item,
+
 .print__item--table {
-  outline: 3px solid orange;
-  margin: 0 2rem;
+  align-self: flex-end;
+  width: 25%;
+  border-spacing: 0;
+}
+td {
+  text-align: left;
+  line-height: 1.8rem;
+}
+.td--color {
+  @extend td;
+  background-color: #aaa;
+}
+th {
+  @extend td;
+  background-color: #aaa;
+  padding: 0.2rem;
+  border-bottom: 2px solid #000;
 }
 .print__item {
-  padding: 2rem;
-  background-color: #aaa;
+  width: 70%;
+  height: 100%;
+  background-image: url("/src/assets/img/template__shirt.png");
+  background-position: 0 0;
+  background-size: 100%;
 }
