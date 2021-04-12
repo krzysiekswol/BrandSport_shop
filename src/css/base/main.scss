@@ -1,3 +1,6 @@
+body {
+  background-color: #000;
+}
 .container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -244,7 +247,7 @@ footer {
   .footerBoxes {
     width: 80%;
     height: 70%;
-    border-right: 1px solid #aaa;
+    // border-right: 1px solid #aaa;
     margin-bottom: 1%;
     // display:flex
     display: flex;
@@ -292,13 +295,14 @@ footer {
       align-items: center;
       .facebook {
         flex-basis: 40%;
-        width: 4rem;
-        padding: 0.2rem 0.5rem;
+        width: 3rem;
+        height: 3rem;
         background-color: #4267b2;
         color: white;
         text-align: center;
         font-size: 2rem;
-        border-radius: 8%;
+        line-height: 3rem;
+        border-radius: 50%;
         margin: 0 1rem;
       }
       .instagram {
