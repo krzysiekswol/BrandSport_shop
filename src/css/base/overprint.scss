@@ -1,5 +1,5 @@
 .l-main {
-  background-color: #f9f9f9;
+  background-color: rgb(230, 230, 230);
 }
 .print {
   padding: 3rem;
@@ -21,18 +21,19 @@ td {
 }
 .td--color {
   @extend td;
-  background-color: #aaa;
+  background-color: #4d5250;
 }
 th {
   @extend td;
-  background-color: #aaa;
+  background-color: #4d5250;
   padding: 0.2rem;
   border-bottom: 2px solid #000;
 }
 .print__item {
-  width: 70%;
+  width: 100%;
   height: 100%;
   background-image: url("/src/assets/img/template__shirt.png");
   background-position: 0 0;
   background-size: 100%;
+  background-repeat: no-repeat;
 }
