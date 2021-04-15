@@ -53,14 +53,21 @@ const automaticSlider = () => {
 setInterval(automaticSlider, 5000);
 
 // modal
-const promoBoxes = document.querySelectorAll(".promoBox__item");
-console.log(promoBoxes);
-
-promoBoxes.forEach((item) => {
-  item.addEventListener("click", function () {
-    document.querySelector(".modal").classList.add("modal__active");
-  });
+const imgModal = document.querySelector(".modal__img");
+document.querySelector(".js-animateOne").addEventListener("click", function () {
+  document.querySelector(".modal").classList.add("modal__active");
+  imgModal.src = "./src/assets/img/promo1.jpg";
 });
+document.querySelector(".js-animateTwo").addEventListener("click", function () {
+  document.querySelector(".modal").classList.add("modal__active");
+  imgModal.src = "./src/assets/img/promo2.jpg";
+});
+document
+  .querySelector(".js-animateThree")
+  .addEventListener("click", function () {
+    document.querySelector(".modal").classList.add("modal__active");
+    imgModal.src = "./src/assets/img/promo3.jpg";
+  });
 
 const closeModal = document.querySelector(".modal--cancel");
 closeModal.addEventListener("click", function () {
