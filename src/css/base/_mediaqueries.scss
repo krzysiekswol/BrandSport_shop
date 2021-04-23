@@ -1,0 +1,27 @@
+@media (max-width: 760px) {
+  .container {
+    grid-template-rows: repeat(6, 1fr);
+  }
+  header {
+    grid-row: 1/2;
+  }
+  main {
+    grid-row: 2/6;
+    justify-content: flex-start;
+    .promo {
+      flex-direction: column;
+      justify-content: flex-start;
+      .promoBox {
+        width: 80%;
+      }
+    }
+  }
+  footer {
+    grid-row: 6/7;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .footerBoxes {
+      width: 30%;
+    }
+  }
+}

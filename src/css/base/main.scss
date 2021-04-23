@@ -166,10 +166,6 @@ main {
     margin: 2rem auto 0 auto;
     padding: 0.4rem;
     color: red;
-    // border-top: 0.2rem solid red;
-    // border-bottom: 0.2rem solid red;
-
-    // font-weight: lighter;
   }
   .promo {
     display: flex;
@@ -200,7 +196,7 @@ main {
       &::after {
         content: "";
         position: absolute;
-        top: 15%;
+        top: 22%;
         left: 0;
         width: 90%;
         height: 0.2rem;
@@ -266,21 +262,21 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   .footerBoxes {
     width: 80%;
-    height: 70%;
+    // height: 70%;
     // border-right: 1px solid #aaa;
     margin-bottom: 1%;
     // display:flex
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     .companyName {
       color: white;
       margin: 1rem;
-      text-align: center;
+      text-align: left;
       .red {
         color: red;
       }
@@ -325,7 +321,7 @@ footer {
         line-height: 3.75rem;
         margin: 0 0.75rem;
         background-color: #4267b2;
-        border-radius: 50%;
+        border-radius: 5px;
         overflow: hidden;
       }
       .instagram {
