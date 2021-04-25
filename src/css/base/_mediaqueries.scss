@@ -1,3 +1,18 @@
+@media (max-width: 950px) {
+  .modal {
+    height: 60%;
+    .modal--cancel {
+      position: absolute;
+      top: -1%;
+      left: 91%;
+      padding: 0.5rem;
+      color: #4d5250;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+  }
+}
+
 @media (max-width: 760px) {
   .container {
     grid-template-rows: repeat(6, 1fr);
@@ -16,12 +31,29 @@
       }
     }
   }
+  .modal {
+    width: 80%;
+    height: 60%;
+    top: 100vh;
+    left: 10%;
+
+    .modal--cancel {
+      position: absolute;
+      top: -1%;
+      left: 92%;
+      padding: 0.5rem;
+      color: #4d5250;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+  }
+
   footer {
     grid-row: 6/7;
     justify-content: space-evenly;
     flex-wrap: wrap;
     .footerBoxes {
-      width: 30%;
+      width: 50%;
     }
   }
 }

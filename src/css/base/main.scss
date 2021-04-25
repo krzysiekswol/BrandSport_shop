@@ -3,6 +3,7 @@ body {
 }
 .container {
   display: grid;
+  align-items: stretch;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(9, 1fr);
   max-width: 1366px;
@@ -229,11 +230,12 @@ main {
   border: 3px solid #4d5250;
   .modal--cancel {
     position: absolute;
-    top: 1%;
-    left: 94%;
+    top: -1%;
+    left: 92%;
     padding: 0.5rem;
     color: #4d5250;
     cursor: pointer;
+    font-size: 2rem;
   }
   .modal__item {
     width: 90%;
