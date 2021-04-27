@@ -13,7 +13,7 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 600px) {
   .container {
     grid-template-rows: repeat(6, 1fr);
   }
@@ -23,11 +23,39 @@
   main {
     grid-row: 2/6;
     justify-content: flex-start;
+    .promoBox__header {
+      justify-self: flex-start;
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
+      margin: auto;
+      padding: 0.4rem;
+      color: red;
+      // font-weight: bold;
+    }
     .promo {
       flex-direction: column;
       justify-content: flex-start;
       .promoBox {
         width: 80%;
+      }
+    }
+    .cooperate {
+      .cooperate__header {
+        margin: 1rem;
+        flex-basis: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 22%;
+          left: 0;
+          width: 80%;
+          height: 0.1rem;
+          margin: 0 10%;
+          background-color: #4d5250;
+        }
       }
     }
   }

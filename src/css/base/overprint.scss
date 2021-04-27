@@ -18,21 +18,26 @@
 td {
   text-align: left;
   line-height: 1.8rem;
+  padding: 0.2rem;
+  background-color: #fff;
+  color: #000;
 }
 .td--color {
   @extend td;
-  background-color: #4d5250;
+  color: #fff;
+  background-color: #000;
 }
 th {
   @extend td;
-  background-color: #4d5250;
+  background-color: red;
   padding: 0.2rem;
+  color: #fff;
   border-bottom: 2px solid #000;
 }
 .print__item {
   width: 100%;
   height: 100%;
-  background-image: url("/src/assets/img/template__shirt.png");
+  background-image: url("/src/assets/img/template_shirt.png");
   background-position: 0 0;
   background-size: 100%;
   background-repeat: no-repeat;
