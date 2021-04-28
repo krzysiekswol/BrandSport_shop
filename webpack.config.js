@@ -15,7 +15,7 @@ module.exports = {
     "index": "./src/index.js",
   }, 
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, 'dist'),
     filename: "[name].[contenthash].bundle.js",
   },
   devServer: {
@@ -63,8 +63,8 @@ module.exports = {
           }
         }),
          new CopyWebpackPlugin([{
-          from: './src/assets',
-          to: './dest/assets'
+          from: './src/assets/img',
+          to: './'
         }]),
         new PrettierPlugin(),
   ],
