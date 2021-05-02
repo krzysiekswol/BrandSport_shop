@@ -62,10 +62,10 @@ module.exports = {
           ]
           }
         }),
-         new CopyWebpackPlugin([{
-          from: './src/assets/img',
-          to: './'
-        }]),
+        //  new CopyWebpackPlugin([{
+        //   from: './src/assets/img',
+        //   to: './'
+        // }]),
         new PrettierPlugin(),
   ],
   
@@ -97,7 +97,9 @@ module.exports = {
         use: {
           loader: "file-loader",
           options: {
-            name: "[name].[ext]"
+            name: "[name].[ext]",
+            outputPath: 'assets/img',
+            publicPath: 'assets/img',
           }
         }
       },
